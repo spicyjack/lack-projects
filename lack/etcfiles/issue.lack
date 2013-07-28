@@ -1,0 +1,21 @@
+[1;34;40m
+          _//            _/           _//   _//   _//
+          _//           _/ //      _//   _//_//  _//
+          _//          _/  _//    _//       _// _//
+          _//         _//   _//   _//       _/ _/
+          _//        _////// _//  _//       _//  _//
+          _//       _//       _//  _//   _//_//   _//
+          _////////_//         _//   _////  _//     _//
+[37;40m
+                 [1;36;44mLinux Appliance Construction Kit[0;37;40m
+     [1;36;44mhttp://code.google.com/p/lack/ | <linuxack@googlegroups.com>[0;37;40m
+
+[1;33;40mRelease:[37;40m :RELEASE_VER:, kernel :KERNEL_VER:
+
+Account info:[34;40m
+u: root               p: Disabled; use SUDO from 'lack' user account
+u: lack               p: :LACK_PASS:[0;37;40m
+
+Shells are available on virtual consoles 1-5, no login required; 
+hit <[1;32;40mAlt-F?[0;37;40m> to switch to a different virtual console.
+

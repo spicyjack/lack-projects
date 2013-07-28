@@ -1,0 +1,3 @@
+XLACK Release Notes
+ http://groups.google.com/group/linuxack | <linuxack@groups.google.com>
+
