@@ -12,12 +12,12 @@ slink /etc/issue /etc/issue.lack 0644 0 0
 file /etc/modules :PROJECT_DIR:/etcfiles/modules 0644 0 0
 file /etc/fstab :PROJECT_DIR:/etcfiles/fstab 0644 0 0
 file /etc/inittab :PROJECT_DIR:/etcfiles/inittab 0644 0 0
-file /etc/group :BUILD_BASE:/common/etcfiles/group 0644 0 0
-file /etc/passwd :BUILD_BASE:/common/etcfiles/passwd 0644 0 0
-file /etc/shadow :BUILD_BASE:/common/etcfiles/shadow 0640 0 0
-file /etc/sudoers :BUILD_BASE:/common/etcfiles/sudoers 0440 0 0
+file /etc/group :LACK_BASE:/common/etcfiles/group 0644 0 0
+file /etc/passwd :LACK_BASE:/common/etcfiles/passwd 0644 0 0
+file /etc/shadow :LACK_BASE:/common/etcfiles/shadow 0640 0 0
+file /etc/sudoers :LACK_BASE:/common/etcfiles/sudoers 0440 0 0
 # the banner-printer-outer
-file /etc/scripts/start_shell.sh :BUILD_BASE:/common/scripts/start_shell.sh 0755 0 0
+file /etc/scripts/start_shell.sh :LACK_BASE:/common/scripts/start_shell.sh 0755 0 0
 # /etc/network (directory already exists in _base)
 dir /etc/network/if-down.d 0755 0 0
 dir /etc/network/if-post-down.d 0755 0 0
@@ -30,12 +30,12 @@ dir /etc/network/run 0755 0 0
 #file /etc/network/run/ifstate /etc/network/run/ifstate 0644 0 0
 # /usr/share/udhcpc for udhcpc script
 dir /usr/share/udhcpc 0755 0 0
-file /usr/share/udhcpc/default.script :BUILD_BASE:/common/scripts/udhcpc.default.script 0755 0 0
+file /usr/share/udhcpc/default.script :LACK_BASE:/common/scripts/udhcpc.default.script 0755 0 0
 # /sbin
 file /sbin/modprobe /sbin/modprobe 0755 0 0
 # /usr/bin
 # a script that runs nslookup
-file /usr/bin/host :BUILD_BASE:/common/scripts/host.sh 0755 0 0
+file /usr/bin/host :LACK_BASE:/common/scripts/host.sh 0755 0 0
 # shellinabox certs
 dir /etc/ssl 0755 0 0
 dir /etc/ssl/certs 0755 0 0
@@ -45,22 +45,22 @@ file /etc/ssl/certs/certificate.pem :TEMP_DIR:/certificate.pem 0644 0 0
 # get the full set of init helper scripts
 dir /etc/init.d 0755 0 0
 #file /etc/init.d/rcS :PROJECT_DIR:/scripts/rcS 0755 0 0
-file /etc/init.d/bb-install :BUILD_BASE:/common/initscripts/bb-install 0755 0 0
-file /etc/init.d/hostname :BUILD_BASE:/common/initscripts/hostname 0755 0 0
-file /etc/init.d/kernel-modules :BUILD_BASE:/common/initscripts/kernel-modules 0755 0 0
-file /etc/init.d/klogd :BUILD_BASE:/common/initscripts/klogd 0755 0 0
-file /etc/init.d/loadfont :BUILD_BASE:/common/initscripts/loadfont 0755 0 0
-file /etc/init.d/miscfs :BUILD_BASE:/common/initscripts/miscfs 0755 0 0
+file /etc/init.d/bb-install :LACK_BASE:/common/initscripts/bb-install 0755 0 0
+file /etc/init.d/hostname :LACK_BASE:/common/initscripts/hostname 0755 0 0
+file /etc/init.d/kernel-modules :LACK_BASE:/common/initscripts/kernel-modules 0755 0 0
+file /etc/init.d/klogd :LACK_BASE:/common/initscripts/klogd 0755 0 0
+file /etc/init.d/loadfont :LACK_BASE:/common/initscripts/loadfont 0755 0 0
+file /etc/init.d/miscfs :LACK_BASE:/common/initscripts/miscfs 0755 0 0
 file /etc/init.d/networking :PROJECT_DIR:/scripts/networking 0755 0 0
-file /etc/init.d/procfs :BUILD_BASE:/common/initscripts/procfs 0755 0 0
-file /etc/init.d/remount-rootfs :BUILD_BASE:/common/initscripts/remount-rootfs 0755 0 0
-file /etc/init.d/rootvol :BUILD_BASE:/common/initscripts/rootvol 0755 0 0
-file /etc/init.d/run-program :BUILD_BASE:/common/initscripts/run-program 0755 0 0
-file /etc/init.d/shellinaboxd :BUILD_BASE:/common/initscripts/shellinaboxd 0755 0 0
-file /etc/init.d/syslogd :BUILD_BASE:/common/initscripts/syslogd 0755 0 0
-file /etc/init.d/sysfs :BUILD_BASE:/common/initscripts/sysfs 0755 0 0
-file /etc/init.d/udev :BUILD_BASE:/common/initscripts/udev 0755 0 0
-file /etc/init.d/usb-modules :BUILD_BASE:/common/initscripts/usb-modules 0755 0 0
+file /etc/init.d/procfs :LACK_BASE:/common/initscripts/procfs 0755 0 0
+file /etc/init.d/remount-rootfs :LACK_BASE:/common/initscripts/remount-rootfs 0755 0 0
+file /etc/init.d/rootvol :LACK_BASE:/common/initscripts/rootvol 0755 0 0
+file /etc/init.d/run-program :LACK_BASE:/common/initscripts/run-program 0755 0 0
+file /etc/init.d/shellinaboxd :LACK_BASE:/common/initscripts/shellinaboxd 0755 0 0
+file /etc/init.d/syslogd :LACK_BASE:/common/initscripts/syslogd 0755 0 0
+file /etc/init.d/sysfs :LACK_BASE:/common/initscripts/sysfs 0755 0 0
+file /etc/init.d/udev :LACK_BASE:/common/initscripts/udev 0755 0 0
+file /etc/init.d/usb-modules :LACK_BASE:/common/initscripts/usb-modules 0755 0 0
 # start symlinks
 dir /etc/start 0755 0 0
 slink /etc/start/00loadfont /etc/init.d/loadfont 0755 0 0
@@ -84,5 +84,5 @@ slink /etc/stop/75sysfs /etc/init.d/sysfs 0755 0 0
 slink /etc/stop/89klogd /etc/init.d/klogd 0755 0 0
 slink /etc/stop/90syslogd /etc/init.d/syslogd 0755 0 0
 slink /etc/stop/99procfs /etc/init.d/procfs 0755 0 0
-# vi: set sw=4 ts=4 paste:
+# vim: set shiftwidth=2 tabstop=2 paste:
 # eof
