@@ -62,8 +62,8 @@ CONFIG_STATIC=y
 # CONFIG_FEATURE_INDIVIDUAL is not set
 # CONFIG_FEATURE_SHARED_BUSYBOX is not set
 # CONFIG_LFS is not set
-CONFIG_CROSS_COMPILER_PREFIX="/opt/cross/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-"
-CONFIG_SYSROOT="/opt/cross/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot"
+CONFIG_CROSS_COMPILER_PREFIX="/opt/cross/armv6-lack_rpi-linux-gnueabi/bin/armv6-lack_rpi-linux-gnueabi-"
+CONFIG_SYSROOT="/opt/cross/armv6-lack_rpi-linux-gnueabi/armv6-lack_rpi-linux-gnueabi/sysroot"
 CONFIG_EXTRA_CFLAGS=""
 CONFIG_EXTRA_LDFLAGS=""
 CONFIG_EXTRA_LDLIBS=""
